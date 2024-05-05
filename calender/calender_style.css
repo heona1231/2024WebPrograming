@@ -1,0 +1,62 @@
+/* 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* 기본 속성 */
+body {
+    margin: 0;
+    background-color: white;
+}
+
+a { 
+    text-decoration: none;
+    color: #FFF; /* 링크 색상 설정 */
+}
+
+nav {
+    display: flex;
+    height: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px; padding-right: 30px;
+    background-color: #000;
+    font-family: 'Pretendard';
+    font-weight: 300;
+}
+
+/* 네비게이션 바 */
+.logo, .nav_menu, .nav_mypage { /* 공통 스타일을 부모로 옮김 */
+    display: flex;
+    align-items: center;
+}
+
+.logoimg { /* 로고 */
+    max-width: 200px;
+    max-height: 50px;
+}
+
+.nav_menu, .nav_mypage { /* 메뉴 및 내정보 wrapper */
+    list-style: none;
+    margin: 0;
+    padding-right: 0;
+    display: flex;
+}
+
+.nav_menu a { /* 메뉴의 a 속성 */
+    font-size: 24px;
+    padding: 8px 40px;
+}
+
+.nav_mypage { /* 내정보 속성 */
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-left: auto;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background-color: #FFF;
+    color: #000;
+    font-size: 20px;
+    display: flex; /* 내용을 수평으로 정렬하기 위해 flex를 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+}
