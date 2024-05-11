@@ -7,13 +7,32 @@
     <link rel="stylesheet" href="style.css">
     <title>Fitsiah</title>
     <style>
-        .paper2 {
+        .next_box {
             display: inline-block;
             vertical-align: top;
             margin: 100px;
+            border-radius: 10px;
+            background: #212020;
+            padding: 24px;
+            width: 540px;
+            height: 540px;
+            color: #fff;
         }
-        .daily_exercise{
-            margin-top: 65px;
+
+        .next_box header {
+            display: flex;
+            align-items: center;
+            padding: 25px 30px 10px;
+            justify-content: space-between;
+            font-size: 28.5px;
+            text-align: center;
+            justify-content: center;
+            font-weight: 500;
+        }
+
+        .next_box header p {
+            margin-left: 39px;
+            margin-left: auto;
         }
     </style>
     <link rel="stylesheet"
@@ -21,10 +40,11 @@
     <script src="script.js" defer></script>
 </head>
 
+
 <body>
     <!-- 네비게이션 -->
     <div class="nav">
-        <p class="logo"><a href="/main"><img src="Logo.png"></a></p>
+        <p class="logo"><a href="/main"><img src="image/Logo.png"></a></p>
         <ul class="nav_menu">
             <li class="active"><a href="/exercise">운동하기</a></li>
             <li><a href="/recommend">운동추천</a></li>
@@ -36,7 +56,7 @@
     </div>
 
     <!-- 캘린더 -->
-    <div class="paper">
+    <div class="first_box">
         <header>
             <p class="current-date"></p>
             <div class="icons">
@@ -58,13 +78,31 @@
         </div>
     </div>
 
-    <div class="paper2">
-        <div class="daily_exercise">
-            <p class="current-date"></p>
-            <p style="color:#fff; font-size:27.5px;">나의 운동</p>
+    <div class="second_box">
+        <header>
+            <p>오늘의 기록</p>
+            <div class="icons">
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+            </div>
+        </header>
+        <div class="today">
+            <p class="today_emo"><a href="/emotion"><img src="image/짱이야.png"></a></p>
+            <p class="today_mention">오늘 기분 최고!<br>나는 오늘 짱이야!</p>
         </div>
-
+        <div class="memo">
+            <input type="text" placeholder="오늘의 문구를 입력하세요!">
+        </div>
     </div>
+
+    <div class="next_box" style="display: none;">
+        <header>
+            <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+            </div>
+            <p>짜잔</p>
+        </header>
+    </div>
+
 
 </body>
 
