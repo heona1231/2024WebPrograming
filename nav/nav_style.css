@@ -1,0 +1,55 @@
+/* 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* 기본 속성 */
+body {
+    margin: 0;
+    background-color: #1F2024;
+    max-width: 1920px;
+}
+
+/* 네비게이션 */
+nav {
+    padding: 0 15px;
+    background: #2B2C31;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo > img {
+    max-height: 130px;
+}
+
+.nav_mypage > a > img {
+    width: 60px;
+    height: 60px;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* 로고를 왼쪽으로 밀어냄 */
+}
+
+.nav_menu > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.nav_menu > ul > li > a {
+    text-decoration: none;    
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 28px;
+    padding: 0 50px;
+    color: #FFF;
+}
+
+.nav_menu > ul > li > a:hover {
+    color: #FFd700;
+}
