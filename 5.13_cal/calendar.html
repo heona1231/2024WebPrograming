@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="javascript" src="script.js"></script>
+    <title>Fitsiah</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="script.js" defer></script>
+</head>
+
+
+<body>
+    <!-- 네비게이션 -->
+    <nav>
+        <img src="image/LOGO.png">
+        <ul class="nav-menu">
+            <li><a href="/exercise">운동하기</a></li>
+            <li><a href="/recommend">운동추천</a></li>
+            <li><a href="/diary">다이어리</a></li>
+        </ul>
+        <a href="/mypage"><img src="image/Mypage.png"></a>
+    </nav>
+
+    <!-- 캘린더 -->
+    <div class="box-set first_box">
+        <header>
+            <p class="current-date"></p>
+            <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+            </div>
+        </header>
+        <div class="calendar">
+            <ul class="weeks">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+            </ul>
+            <ul class="days"></ul>
+        </div>
+    </div>
+    <div class="second_box box-set">
+        <div class="d-first">
+            <header>
+                <p>오늘의 기록</p>
+                <div class="icons">
+                    <span id="next" class="material-symbols-rounded">chevron_right</span>
+                </div>
+            </header>
+            <div class="emotion_record">
+                <img src="image/짱이야.png">
+                <p>오늘 기분 최고!<br>나는 오늘 짱이야!</p>
+            </div>
+            <div class="memo">
+                <input type="text" placeholder="오늘의 문구를 입력하세요!">
+            </div>
+
+        </div>
+        <div class="d-second">
+            <header>
+                <div class="icons">
+                    <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                </div>
+                <p>짜잔</p>
+            </header>
+        </div>
+    </div>
+</body>
+
+</html>
