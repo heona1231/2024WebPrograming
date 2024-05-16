@@ -75,24 +75,52 @@ daysTag.addEventListener("click", (event) => { // daysTag에 클릭 이벤트 �
     }
 });
 
+// 다이어리칸 전환
+document.addEventListener("DOMContentLoaded", function() {
+    const nextBox = document.querySelector(".d-second"); // next_box 요소 선택
+    nextBox.style.display = "none"; // 처음에 next_box를 숨김
+});
 
-
-// 오늘의 기록에 아이콘을 누르면 박스 변경
-const nextIcon = document.querySelector(".second_box .icons #next"); // 다음 아이콘 요소 선택
-const prevIcon = document.querySelector(".next_box .icons #prev"); // 이전 아이콘 요소 선택
+const nextIcon = document.querySelector(".d-first .icons #next"); // 다음 아이콘 요소 선택
+const prevIcon = document.querySelector(".d-second .icons #prev"); // 이전 아이콘 요소 선택
 
 nextIcon.addEventListener("click", () => { // 다음 아이콘에 클릭 이벤트 추가
-    const secondBox = document.querySelector(".second_box"); // second_box 요소 선택
-    const nextBox = document.querySelector(".next_box"); // next_box 요소 선택
+    const secondBox = document.querySelector(".d-first"); // second_box 요소 선택
+    const nextBox = document.querySelector(".d-second"); // next_box 요소 선택
     
     secondBox.style.display = "none"; // second_box를 숨김
     nextBox.style.display = "block"; // next_box를 보이도록 설정
 });
 
 prevIcon.addEventListener("click", () => { // 이전 아이콘에 클릭 이벤트 추가
-    const secondBox = document.querySelector(".second_box"); // second_box 요소 선택
-    const nextBox = document.querySelector(".next_box"); // next_box 요소 선택
+    const secondBox = document.querySelector(".d-first"); // second_box 요소 선택
+    const nextBox = document.querySelector(".d-second"); // next_box 요소 선택
     
     nextBox.style.display = "none"; // next_box를 숨김
     secondBox.style.display = "block"; // second_box를 보이도록 설정
+});
+
+
+// third_box 오늘의 날짜 표시
+document.addEventListener("DOMContentLoaded", function() {
+    const currentDateElement = document.querySelectorAll(".third_box .current-date");
+    const date = new Date();
+    const formattedDate = `${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')}`;
+    
+    currentDateElement.forEach(element => {
+        element.textContent = formattedDate;
+    });
+});
+
+
+// 나의 운동 요약 화살표에 클릭 이벤트 추가
+const daily_exercise = document.querySelector(".third_box .icons #next");
+daily_exercise.addEventListener("click", (event) => {
+    alert('개봉박두');
+});
+
+// 나의 소모 칼로리 화살표에 클릭 이벤트 추가
+const daily_calorie = document.querySelector(".fourth_box .icons #next");
+daily_calorie.addEventListener("click", (event) => {
+    alert('개봉박두');
 });

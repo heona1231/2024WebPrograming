@@ -1,0 +1,451 @@
+/*폰트*/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"); /*기본 폰트 Pretendard*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); /*다이어리 아이콘 사용*/
+
+
+/*전체, body 속성*/
+* {
+    font-family: 'Pretendard';
+    color: #fff;
+}
+body{
+    margin: 0;
+    background-color: #1F2024;
+    /* max-width: 1920px; */ /*화면 축소했을 때 네비가 끊기는 현상이 있어 주석처리함*/
+}
+
+.white-text {
+    color: white;
+}
+
+.yellow-text {
+    color: #ffd700;
+}
+
+
+/*박스에 사용될 기본 속성(디자인)*/
+.box-set{
+    background-color: #2B2C31;
+    padding: 25px;
+    border-radius: 2%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*박스 헤더에 사용될 기본 속성(디자인)*/
+.box-set>header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+/*네비게이션*/
+nav{ /*네비게이션 wrapper*/
+    padding: 0 15px;
+    background-color: #2B2C31;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav>img{ /*네비게이션 로고 이미지*/
+    max-height: 110px;
+}
+nav>a>img{ /*마이페이지 이미지*/
+    max-height: 50px;
+}
+nav>ul { /*운동하기 등 목록 ul*/
+    display: flex;
+    align-items: center;
+    margin: 0;
+    flex-grow: 1;
+    flex-shrink: 0; /*화면이 줄어들어도 글자 원래 형태 유지*/
+}
+nav>ul>li {
+    display: inline-block;
+}
+nav>ul>li>a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 0 50px;
+}
+
+
+/*구분선 위 섹션*/
+.first_section{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+
+/*캘린더*/
+.first_box {
+    width: 560px; height: 560px;
+}
+
+.first_box header {
+    padding: 25px 30px 10px;   
+}
+
+header .icons {
+    display: flex;
+}
+
+header .icons span {
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 38px;
+    font-size: 2.5rem;
+    user-select: none;
+    border-radius: 50%;
+}
+
+#prev {
+    margin-right: 10px;
+}
+
+.icons span:last-child {
+    margin-right: -10px;
+}
+
+header .current-date {
+    font-size: 1.72rem;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+.calendar {
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+
+.calendar .days {
+    margin-bottom: 20px;
+}
+
+.calendar li {
+    width: calc(100% / 7);
+    font-size: 1.28rem;
+}
+
+.calendar .weeks li {
+    font-weight: 500;
+    cursor: default;
+}
+
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+}
+
+.days li.inactive {
+    color: #989797;
+}
+
+.days li.active {
+    color: #000;
+}
+
+.days li::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+    background: #ffd700;
+}
+
+.days li:not(.active):hover::before {
+    background: #aaa;
+}
+
+
+/*오늘의 기록*/
+.second_box{
+    margin-left: 90px;
+    width: 560px; height: 560px;
+}
+
+.second_box header{
+    font-size: 34px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin-left: 10px;
+}
+
+.second_box header .icons{
+    align-items: center;
+}
+
+
+.emotion_record{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.emotion_record img{
+    max-width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+.emotion_record p{
+    margin: auto;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.memo {
+    width: 480px;
+    height: 120px;
+    display: flex;
+    background: #42444B;
+    border-radius: 10px;
+    margin: 30px auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.memo input {
+    font-size: 20px;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+.memo input::placeholder {
+    align-items: center;
+    font-size: 22px;
+}
+
+.memo input:focus::placeholder {
+    color: #8b8a8a;
+}
+
+
+
+/*구분선*/
+.divider {
+    width: 1130px;
+    height: 1px;
+    background-color: #9ca1b5;
+    border: none;
+    margin:100px auto;
+    justify-content: center;
+}
+
+
+
+
+/*구분선 아래 섹션*/
+.second_section{
+    display: flex;
+    margin-bottom: 400px;
+    justify-content: center;
+}
+
+
+/*나의 운동 요약 + 나의 소모 칼로리*/
+.third_fourth_box{
+    width: 780;
+    height: 950px;
+    margin-right: 50px;
+    padding: 0;
+}
+
+
+
+/*나의 운동 요약*/
+.third_box {
+    width: 710px; height: 230px;
+    margin-bottom: 50px;
+}
+
+.third_box header{
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.third_box header .current-date{
+    font-family: Pretendard;
+    font-size: 34px;
+    font-weight: 600;
+    margin-right: 20px;
+    color: #c8c8c8;
+}
+
+.third_box main{
+    display: flex;
+    
+    padding: 0 15px;
+    
+}
+
+.third_image{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.third_image img{
+    max-width: 100%;
+    height: auto;
+    margin-left: 12px;
+    object-fit: contain;
+}
+
+.third_image p{
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    height: 48px;
+}
+
+.explain {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+
+/*나의 소모 칼로리*/
+.fourth_box {
+    width: 710px; height: 570px;
+    display: block;
+}
+
+.fourth_box header{
+    font-size: 34px;
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+.fourth_box main{
+    display: flex;
+}
+
+.potatochip{
+    margin: 40px;
+    margin-top: 100px;
+    width: 280px;
+    height: 280px;
+}
+
+.potatochip img{
+    width: 100%;
+    height: 100%;
+}
+
+.calorie {
+    display: block;
+    margin: 100px 0 0 30px;
+    font-size: 30px;
+    font-weight: 600;
+    width: 300px;
+    height: 120px;
+}
+
+.calorie>header{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.calorie img{
+    width: 100px;
+    height: 100px;
+    margin: auto 10px;
+}
+
+.calorie div{
+    display: flex;
+}
+
+.calorie div span{
+    margin: auto 0;
+    font-size: 32px;
+}
+
+
+
+
+/*부위별 운동 분석*/
+.fifth_box{
+    width: 450px;
+    height: 900px;
+}
+
+.fifth_box header{
+    justify-content: center;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.analyze_text{
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.analyze_text .yellow-text{
+    font-size: 32px;
+}
+
+/* 
+.fifth_box img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.graph_text{
+    margin-left: 20px;
+} */
+
+
+/*footer*/
+footer{
+    padding: 0 15px;
+    background-color: #2B2C31;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
