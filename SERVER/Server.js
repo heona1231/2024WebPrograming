@@ -8,10 +8,10 @@ var conn = mysql.createConnection({
 
 conn.connect();
 
-conn.query("select * from todolist", function(err, rows, fields){
-    if(err) throw err;
-    console.log(rows);
-});
+// conn.query("select * from todolist", function(err, rows, fields){
+//     if(err) throw err;
+//     console.log(rows);
+// });
 
 const express = require('express');
 const app = express();
@@ -29,5 +29,9 @@ app.get('/', function(req, res){
 })
 
 app.get('/list', function(req, res){
+    conn.query("select * from todolist", function(err, rows, fields){
+        if(err) throw err;
+        console.log(rows);
+    });    
     console.log('데이터베이스를 조회합니다.');
 });
