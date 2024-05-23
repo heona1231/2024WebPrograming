@@ -9,9 +9,6 @@
 
 <body>
   <div id="navbar"></div>
-
-  <h1>ff</h1>
-
   <script>
     fetch("nav.html")
       .then(response => response.text())
@@ -20,6 +17,7 @@
       })
       .catch(error => console.error('Error loading navigation:', error));
   </script>
+  <button onclick= "window.location.href='http://localhost:8080/signup'"><b>회원가입</b></button>
 </body>
 
 </html>
