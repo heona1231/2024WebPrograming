@@ -52,9 +52,14 @@ app.get('/signup', (req, res) => {
 })
 
 app.post('/signup', function(req, res){
-    console.log(req);
-    console.log("저장완료");
-})
+    console.log(req.body.user_id);
+    mydb.collection('UserInfo').insertOne(
+        {user_id : req.body.user_id, user_pw : req.body.user_pw, user_name : req.body.user_name, user_birth : req.body.user_birth}
+    ).then(result=>{
+        console.log(result);
+        console.log('데이터 추가 성공');
+    });
+});
 
 // app.listen(8080, function(){
 //     console.log('포트 8080으로 서버 대기중...')
