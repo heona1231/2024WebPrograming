@@ -9,12 +9,16 @@
   "author": "lch",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "mongodb": "^6.6.2",
+    "mongoose": "^8.4.0",
     "node": "^20.13.1",
     "node-mysql": "^0.4.2"
   },
-  "description": "",
   "devDependencies": {
     "nodemon": "^3.1.0"
-  }
+  },
+  "description": ""
 }

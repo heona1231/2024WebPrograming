@@ -1,0 +1,61 @@
+/* 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* 기본 속성 */
+* {
+    font-family: 'pretendard';
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body {
+    margin: 0;
+    background-color: #1F2024;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* 회원가입 */
+.wrap_signuptxt {
+    width: 450px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.wrap_signuptxt p {
+    margin-top: 10px;
+    text-align: left;
+}
+.wrap_signuptxt > img {
+    max-height: 150px;
+    align-self: center;
+}
+.wrap_signuptxt input {
+    width: 100%;
+    height: 45px;
+    margin: 5px auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #42444B;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 200;
+    color: #fff;
+}
+.wrap_signuptxt input[type="submit"] {
+    background-color: #FFD700;
+    color: #1F2024;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.wrap_signuptxt input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
