@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitsiah</title>
+    <link rel="stylesheet" href="exercise-style.css">
+    <script type="javascript" src="exercise-js.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function() {
+          // 플랜 시작하기 클릭 이벤트 설정
+          var startPlanElements = document.querySelectorAll('.start-plan');
+          startPlanElements.forEach(function(element) {
+              element.addEventListener('click', function() {
+                  window.location.href = '/exercise';
+              });
+          });
+      });
+  </script>
+  <body>
+    <nav>
+        <img src="LOGO.png">
+        <ul class="nav-menu">
+            <li><a href="/exercise">운동하기</a></li>
+            <li><a href="/recommend">운동추천</a></li>
+            <li><a href="/diary">다이어리</a></li>
+        </ul>
+        <a href="/mypage"><img src="Mypage.png"></a>
+    </nav>
+    <div class = "sector1">
+        <div class="main_image">
+            <div class="-main-text">
+               <h1><span style="color: white">예슬님을</span><br><span style="color: white">위한 </span><span style="color: #FFD700">운동</span> <span style="color: white;">추천</span></h1>
+                <p>지금은 이 플랜으로 운동하고 있어요!</p>
+            </div>
+            <img src="women_Running.png">
+        </div>
+    </div>
+    <div class = "mid">
+      <div class="head-1-left" id="head-left"><h1>다이어트 입문</h1></div>
+      <div class="head-1-right" id="head-right"><p>체지방을 감소시키고 싶으신가요? 기본 동작들로 효율적인 운동을 해보세요!</p></div>
+    </div>
+    <div class="sector2">
+      <div class="display">
+        <div class="display-1">
+          <img src="picture1.png" alt="Picture 1">
+          <div class="explain-1">
+            <h2>다이어트 <br> 플랜 시작하기(입문)</h2>
+            <p>예상칼로리 | 246-268kcal</p>
+          </div>
+          <div class="explain-2">
+            <ul><span>난이도 | 쉬움</span></ul>
+            <ul><p>운동 개수 | 5개</p></ul>
+            <ul><p style="color: #FFD700">플랜 시작하기</p></ul>
+          </div>
+        </div>
+        <div class="display-2">
+          <img src="picture1.png" alt="Picture 2">
+          <div class="explain-1">
+            <h2>다이어트 <br> 플랜 시작하기(초심)</h2>
+            <p>예상칼로리 | 253-270kcal</p>
+          </div>
+          <div class="explain-2">
+            <ul><span>난이도 | 초급</span></ul>
+            <ul><p>운동 개수 | 7개</p></ul>
+            <ul><p style="color: #FFD700">플랜 시작하기</p></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "mid">
+      <div class="head-1-left" id="head-left"><h1>근육량 증가(입문)</h1></div>
+      <div class="head-1-right" id="head-right"><p>주요 근육들을 단련하여 건강한 신체를 만들어 보세요!</p></div>
+    </div>
+    <div class="sector3">
+      <div class="display">
+        <div class="display-1">
+          <img src="picture2.png" alt="Picture 1">
+          <div class="explain-1">
+            <h2>다이어트 <br> 플랜 시작하기(입문)</h2>
+            <p>예상칼로리 | 246-268kcal</p>
+          </div>
+          <div class="explain-2">
+            <ul><span>난이도 | 쉬움</span></ul>
+            <ul><p>운동 개수 | 5개</p></ul>
+            <ul><p class="start-plan" style="color: #FFD700">플랜 시작하기</p></ul>
+          </div>
+        </div>
+        <div class="display-2">
+          <img src="picture2.png" alt="Picture 2">
+          <div class="explain-1">
+            <h2>다이어트 <br> 플랜 시작하기(초심)</h2>
+            <p>예상칼로리 | 253-270kcal</p>
+          </div>
+          <div class="explain-2">
+            <ul><span>난이도 | 초급</span></ul>
+            <ul><p>운동 개수 | 7개</p></ul>
+            <ul><p class="start-plan" style="color: #FFD700">플랜 시작하기</p></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "mid">
+      <div class="head-1-left" id="head-left"><h1>체력 증가(입문)</h1></div>
+      <div class="head-1-right" id="head-right"><p>나의 스태미나를 길러보세요! 더 성장한 자신을 만나볼 수 있을 거예요.</p></div>
+    </div>
+    <div class="sector4">
+      <div class="display">
+        <div class="display-1">
+          <img src="picture3.png" alt="Picture 1">
+          <div class="explain-1">
+            <h2>체력 증가 <br> 플랜 시작하기(입문)</h2>
+            <p>예상칼로리 | 246-268kcal</p>
+          </div>
+          <div class="explain-2">
+            <ul><span>난이도 | 쉬움</span></ul>
+            <ul><p>운동 개수 | 5개</p></ul>
+            <ul><p class="start-plan" style="color: #FFD700">플랜 시작하기</p></ul>
+          </div>
+        </div>
+        <div class="display-2">
+          <img src="picture3.png" alt="Picture 2">
+          <div class="explain-1">
+            <h2>체력 증가 <br> 시작하기(초심)</h2>
+            <p>예상칼로리 | 253-270kcal</p>
+          </div>
+          <div class="explain-2">
+            <ul><span>난이도 | 초급</span></ul>
+            <ul><p>운동 개수 | 7개</p></ul>
+            <ul><p class="start-plan" style="color: #FFD700">플랜 시작하기</p></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
