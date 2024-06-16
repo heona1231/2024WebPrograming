@@ -1,0 +1,140 @@
+/* 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* 기본 속성 */
+* {
+    font-family: 'pretendard';
+    font-weight: 200;
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #1F2024;
+}
+a{
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 25px;
+}
+h6{
+    font-size: 25px;
+    font-weight: 700;
+}
+header{
+    height: 30px;
+    display: flex;
+    padding: 0px 30px;
+    margin : 20px 0px;
+    align-items: center;
+}
+/*네비게이션*/
+nav{
+    padding: 0 15px;
+    background-color: #2B2C31;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav>img{
+    max-height: 110px;
+}
+nav>a>img{ /*마이페이지*/
+    max-height: 50px;
+}
+nav>ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    flex-grow: 1; /* 남은 공간을 모두 차지하도록 설정 */
+}
+nav>ul>li {
+    display: inline-block; /* 가로로 정렬되도록 설정 */
+}
+nav>ul>li>a {
+    padding: 0 50px;
+    color: #FFF;
+}
+
+/*운동하기*/
+.exercise_box{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    background-color: #2B2C31;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+#box1{
+    height: 500px;
+}
+#box1 header{
+    justify-content: space-between;
+}
+#box1 header>a{
+    width: 100px; height: 25px;
+    font-size: 16px;
+    margin: auto 60px;
+    border-radius: 12px;
+    border: 1px solid #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#startButton {
+    width: 300px; 
+    height: 70px;
+    border-radius: 10px;
+    color: #1F2024;
+    background-color: #FFD700;
+    margin: 20px auto;
+    text-align: center;
+    display: flex; /* Flexbox 컨테이너로 설정 */
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center; /* 수평 가운데 정렬 */
+}
+#Yellow{
+    color: #FFD700;
+    font-size: 25px;
+    font-family: "Pretendard";
+    font-weight: 700;
+}
+.rutin_wrap{
+    display: flex;
+    align-items: center;
+}
+#next{
+    max-height: 40px;
+}
+.ex_rutin{
+    padding: 20px;
+}
+.ex_rutin img{
+    max-width: 150px;
+}
+
+
+/*운동하기 두번째 박스*/
+#box2{
+    height: 200px;
+}
+#box2 header>h6{
+    margin-right: 60px;
+}
+.ex_sum{
+    display: flex;
+    margin: auto;
+}
+.ex_sum img{
+    max-width: 100px;
+}
+.exSum_de{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}

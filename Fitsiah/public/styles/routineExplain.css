@@ -1,0 +1,163 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+
+body{
+    margin: 0;
+    background-color: #1F2024;
+    max-width: 1920px;
+}
+
+/*네비게이션*/
+nav{
+    padding: 0 15px;
+    background-color: #2B2C31;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav>img{
+    max-height: 110px;
+}
+nav>a>img{ /*마이페이지*/
+    max-height: 50px;
+}
+nav>ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    flex-grow: 1; /* 남은 공간을 모두 차지 */
+}
+nav>ul>li {
+    display: inline-block; /* 가로로 정렬 */
+}
+nav>ul>li>a {
+    text-decoration: none;    
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 25px;
+    padding: 0 50px;
+    color: #FFF;
+}
+
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 15px;
+}
+
+.wrap img {
+    max-width: 100%;
+    height: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.introduce {
+    position: absolute;
+    text-align: left;
+    top: 30%;
+    left: 10%;
+    font-size: 30px;
+    color: white;
+}
+
+.introduce h1 {
+    margin: 20px 0 20px 0;
+}
+
+.sector1 {
+    padding : 80px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.rect1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+    width: 1600px;
+    height: 300px;
+    border-radius: 30px;
+    width: calc(100% - 100px); /* 양쪽에 50px씩 간격을 두기 위해 전체 너비에서 100px을 뺍니다. */
+    background: #2B2C31;
+    text-align: left;
+    font-family: 'Pretendard';
+    color: white;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.text1{
+    padding: 0px 25px;
+}
+.rect1 h1 {
+    font-size: 45px;
+}
+
+.rect1 p {
+    font-size: 25px;
+}
+.question {
+    font-family: 'Pretendard';
+    color: white;
+    padding-left: 10%;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 60px;
+    padding-bottom: 70px;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    background: #2B2C31;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pretendard';
+    font-size: 25px;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sector2-1 {
+    display: flex;
+    flex-direction: column; /* 텍스트와 이미지를 세로로 배열. */
+    align-items: center; /* 수직으로 중앙 정렬. */
+    justify-content: center; /* 수평으로 중앙 정렬. */
+    padding-left: 50px;
+}
+
+.mid {
+    display: flex;
+    align-items: center; /* 텍스트를 수직으로 정렬. */
+    padding-right: 500px;
+}
+
+.head-1-left, .head-1-right {
+    text-align: left; /* 텍스트를 왼쪽 정렬. */
+    display: flex; 
+    align-items: center; 
+    font-size: 30px; 
+    color: white; 
+    margin-right: 20px;
+    padding: 15px 40px 0 0;
+}
