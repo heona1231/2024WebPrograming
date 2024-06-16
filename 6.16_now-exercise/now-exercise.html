@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fitsiah</title>
+    <!-- 자바스크립트 -->
+    <script src="script.js" defer></script>
+
+
+    <style>
+        h3 {
+            font-size: 25px;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+        #popup {
+            position: fixed;
+            width: 350px;
+            height: 600px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #1F2024;
+            padding: 30px;
+            border-radius: 10px;
+            z-index: 20;
+            /* 오버레이보다 앞에 오도록 설정 */
+        }
+
+        #popupWrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #popupWrap header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        #popupWrap img {
+            max-height: 180px;
+            margin: 10px auto;
+        }
+
+        #select img {
+            max-width: 55px;
+            margin: 10px auto;
+        }
+
+        #select img {
+            margin: 10px auto;
+            cursor: pointer;
+        }
+
+        #popupWrap input[type="text"] {
+            width: 300px;
+            height: 100px;
+            background: #42444B;
+            border-radius: 10px;
+            margin: 10px auto;
+        }
+
+        #popupWrap input[type="submit"] {
+            width: 300px;
+            height: 40px;
+            background: #ffd700;
+            color: #1F2024;
+            font-weight: 700;
+            font-size: 20px;
+            border-radius: 10px;
+            margin: 10px auto;
+        }
+
+        #closePopup {
+            background-color: transparent;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- 네비게이션 -->
+    <nav>
+        <img src="image/LOGO.png">
+        <ul class="nav-menu">
+            <li><a href="/exercise">운동하기</a></li>
+            <li><a href="/recommend">운동추천</a></li>
+            <li><a href="/diary">다이어리</a></li>
+        </ul>
+        <a href="/mypage"><img src="image/Mypage.png"></a>
+    </nav>
+
+    <main>
+        <!-- 운동 리스트 -->
+        <div class="box-set main-box">
+
+            <!-- 운동 종목 하나 -->
+            <div class="box-set exercise-list">
+                <header>
+                    <p><span class="yellow-text">1</span> 하체 | 레그 익스텐션</p>
+                    <hr class="title-div">
+                    <p class="total-bolume">총 볼륨 3150kg</p>
+                </header>
+                <main>
+                    <div class="one-set">
+                        <p class="set-num">1</p>
+                        <div class="empty-box kg">
+                            <input type="text" placeholder="70">
+                        </div>
+                        <p class="unit">kg</p>
+                        <div class="empty-box count">
+                            <input type="text" placeholder="15">
+                        </div>
+                        <p class="unit">회</p>
+                        <div class="empty-box check-box">
+                            <img src="image/check-mark.png">
+                        </div>
+                        <div class="empty-box check-box-complete">
+                            <img src="image/check-mark.png">
+                        </div>
+                    </div>
+                    <div class="one-set">
+                        <p class="set-num">2</p>
+                        <div class="empty-box kg">
+                            <input type="text" placeholder="70">
+                        </div>
+                        <p class="unit">kg</p>
+                        <div class="empty-box count">
+                            <input type="text" placeholder="15">
+                        </div>
+                        <p class="unit">회</p>
+                        <div class="empty-box check-box">
+                            <img src="image/check-mark.png">
+                        </div>
+                        <div class="empty-box check-box-complete">
+                            <img src="image/check-mark.png">
+                        </div>
+                    </div>
+                    <div class="one-set">
+                        <p class="set-num">3</p>
+                        <div class="empty-box kg">
+                            <input type="text" placeholder="70">
+                        </div>
+                        <p class="unit">kg</p>
+                        <div class="empty-box count">
+                            <input type="text" placeholder="15">
+                        </div>
+                        <p class="unit">회</p>
+                        <div class="empty-box check-box">
+                            <img src="image/check-mark.png">
+                        </div>
+                        <div class="empty-box check-box-complete">
+                            <img src="image/check-mark.png">
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <!-- 운동 종목 하나 -->
+            <div class="box-set exercise-list">
+                <header>
+                    <p><span class="yellow-text">2</span> 하체 | 레그 익스텐션</p>
+                    <hr class="title-div">
+                    <p class="total-bolume">총 볼륨 3150kg</p>
+                </header>
+                <main>
+                    <div class="one-set">
+                        <p class="set-num">1</p>
+                        <div class="empty-box kg">
+                            <input type="text" placeholder="70">
+                        </div>
+                        <p class="unit">kg</p>
+                        <div class="empty-box count">
+                            <input type="text" placeholder="15">
+                        </div>
+                        <p class="unit">회</p>
+                        <div class="empty-box check-box">
+                            <img src="image/check-mark.png">
+                        </div>
+                        <div class="empty-box check-box-complete">
+                            <img src="image/check-mark.png">
+                        </div>
+                    </div>
+                    <div class="one-set">
+                        <p class="set-num">2</p>
+                        <div class="empty-box kg">
+                            <input type="text" placeholder="70">
+                        </div>
+                        <p class="unit">kg</p>
+                        <div class="empty-box count">
+                            <input type="text" placeholder="15">
+                        </div>
+                        <p class="unit">회</p>
+                        <div class="empty-box check-box">
+                            <img src="image/check-mark.png">
+                        </div>
+                        <div class="empty-box check-box-complete">
+                            <img src="image/check-mark.png">
+                        </div>
+                    </div>
+                    <div class="one-set">
+                        <p class="set-num">3</p>
+                        <div class="empty-box kg">
+                            <input type="text" placeholder="70">
+                        </div>
+                        <p class="unit">kg</p>
+                        <div class="empty-box count">
+                            <input type="text" placeholder="15">
+                        </div>
+                        <p class="unit">회</p>
+                        <div class="empty-box check-box">
+                            <img src="image/check-mark.png">
+                        </div>
+                        <div class="empty-box check-box-complete">
+                            <img src="image/check-mark.png">
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+
+        <!-- 운동 시간, 휴식 타이머, 운동 완료 창 -->
+        <div class="box-set under-box">
+            <!-- 운동 시간 설정 -->
+            <div class="box-set timer-box">
+                <header>
+                    <p>운동 시간</p>
+                </header>
+                <main>
+                    <div class="timer-display">
+                        00 : 00 : 00
+                    </div>
+                    <img id="start-timer" src="image/round-play-button-1.png">
+                    <img id="pause-timer" src="image/pause-button-1.png">
+                    <img id="reset-timer" src="image/edit-button-1.png">
+                </main>
+            </div>
+
+
+            <!-- 휴식타이머 -->
+            <div class="box-set rest-box">
+                <header>
+                    <p>휴식 타이머</p>
+                </header>
+                <main>
+                    <span class="yellow-text">ON</span>
+                </main>
+            </div>
+
+            <!-- 휴식타이머 작동 -->
+            <div class="box-set rest-box ing">
+                <header>
+                    <p>휴식 타이머</p>
+                </header>
+                <main>
+                    <span class="yellow-text rest-timer">01:30</span>
+                </main>
+            </div>
+
+            <!-- 운동완료 버튼 -->
+            <div class="box-set complete-box">
+                <p>운동 완료</p>
+            </div>
+        </div>
+
+        <!-- 다이어리 기록 팝업 -->
+        <div id="overlay"></div>
+        <div id="popup">
+            <div id="popupWrap">
+                <header>
+                    <h3>수정하기</h3>
+                    <input type="button" id="closePopup" value="X">
+                </header>
+                <img src="image/happy.png" id="emotion">
+                <div id="select">
+                    <img src="image/happy.png" id="happy">
+                    <img src="image/sad.png" id="sad">
+                    <img src="image/calm.png" id="calm">
+                    <img src="image/depressed.png" id="depressed">
+                    <img src="image/bad.png" id="bad">
+                </div>
+                <input type="text" id="changeText">
+                <input type="submit" value="제출" id="changeSub">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
