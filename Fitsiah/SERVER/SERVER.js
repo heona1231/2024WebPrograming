@@ -137,28 +137,32 @@ app.get("/setting", function(req, res){
     res.render("setting", {user : req.session.user});
 });
 
-// 프로필 설정 업데이트
 app.post("/set", function(req, res){
     db.collection("UserInfo")
-        .updateOne(
-            { user_id: req.session.user.user_id },
-            { $set: { 
-                user_height : req.body.user_height,
-                user_weight : req.body.user_weight,
-                user_proficiency : req.body.user_proficiency,
-                user_purpose : req.body.user_purpose 
-            }}
-        )
-        .then(result => {
-            console.log(result);
-            console.log("사용자 정보 업데이트 성공");
+        .updateOne({user_id: req.session.user.user_id}, {$set : {
+            user_weight : req.body.user_weight,
+            user_height : req.body.user_height,
+            user_proficiency : req.body.user_proficiency,
+            user_purpose : req.body.user_purpose,
+        }}).then(result=>{
+            console.log(req.body);
             res.redirect("/exercise");
-        })
-        .catch(err => {
-            console.error("사용자 정보 업데이트 오류:", err);
-            res.status(500).send("사용자 정보 업데이트 중 오류가 발생했습니다.");
+        }).catch(err=>{
+            console.log(err);
         });
 });
+
+// 로그인 이후 페이지 렌더링
+app.get("/exercise", function(req, res){
+    if (req.session.user) {
+        console.log("세션 유지");
+        res.render("exSummary", { user: req.session.user });
+    } else {
+        res.render("login");
+    }
+});
+
+
 
 
 // 루틴 추천

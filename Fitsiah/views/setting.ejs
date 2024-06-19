@@ -6,46 +6,40 @@
     <title>핏시아</title>
     <link rel="stylesheet" href="/styles/setting.css">
     <script src="/scripts/setting.js" defer></script>
-    <script>
-        $(document).ready(function(){
-            $("#user_proficiency").change(function(){
-                var val = $("#user_proficiency").find(":selected").val();
-                $("#value").val(val);
-            });
-        });
-    </script>
 </head>
 <body>
     <div class="all-wrap">
         <img src="/images/Vector 2.png" id="settingImg">
         <div class="setting-wrap">
-            <form action="/set" method="post" id="settingForm">
+            <form action="/set" method="post">
                 <div id="q2">
                     <p>당신에게 딱 맞는 운동을 위해</p>
                     <h1>키, 몸무게를 입력해주세요</h1>
-                    <input type="number" name="user_height" placeholder="키">
-                    <input type="number" name="user_weight" placeholder="몸무게">
+                    <input type="number" name="user_height" placeholder="키" required>
+                    <input type="number" name="user_weight" placeholder="몸무게" required>
                 </div>
-                <div id="q3">
+                <div id="q3" class="hidden">
                     <p>어떤 도움이 필요한지 확인하기 위해</p>
                     <h1>운동 숙련도를 알려주세요</h1>
-                    <select id="user_proficiency" onChange="getselect1()">
-                        <option value="beginner">입문자</option>
-                        <option value="intermediate">중급자</option>
-                        <option value="advanced">숙련자</option>
-                    </select>    
+                    <input type="radio" id="beginner" name="user_proficiency" value="beginner">
+                    <label for="beginner">입문자</label>
+                    <input type="radio" id="intermediate" name="user_proficiency" value="intermediate">
+                    <label for="intermediate">중급자</label>
+                    <input type="radio" id="advanced" name="user_proficiency" value="advanced">
+                    <label for="advanced">숙련자</label>
                 </div>
-                <div id="q4">
+                <div id="q4" class="hidden">
                     <p>당신의 목적에 맞는 도움을 위해</p>
                     <h1>운동 목적을 알려주세요</h1>
-                    <select id="user_purpose" onChange="getselect2()">
-                        <option value="weight_loss">다이어트</option>
-                        <option value="bulking">벌크업</option>
-                        <option value="endurance">체력</option>
-                    </select>
+                    <input type="radio" id="weight_loss" name="user_purpose" value="weight_loss">
+                    <label for="weight_loss">다이어트</label>
+                    <input type="radio" id="bulking" name="user_purpose" value="bulking">
+                    <label for="bulking">벌크업</label>
+                    <input type="radio" id="endurance" name="user_purpose" value="endurance">
+                    <label for="endurance">체력</label>
                 </div>
-                <input class="nextsubButton" id="nextButton" type="button" value="완료">
-                <input class="nextsubButton" id="submitButton" type="submit" value="완료">
+                <button id="nextButton" type="button">다음</button>
+                <button id="submitButton" type="submit" class="hidden">완료</button>
             </form>
         </div>
     </div>

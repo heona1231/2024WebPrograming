@@ -63,6 +63,7 @@ input, select {
     border: none;
     display: block;
     text-align: left; /* 왼쪽 정렬 */
+    color: #ffffff; /* 텍스트 색상 */
 }
 
 .nextsubButton {
@@ -73,6 +74,11 @@ input, select {
     display: block; /* 블록 요소로 설정하여 가운데 정렬 */
     width: 380px; /* 다른 input 요소와 같은 넓이 */
     text-align: center; /* 텍스트를 가운데 정렬 */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 0;
+    text-decoration: none;
 }
 
 .hidden {
@@ -96,4 +102,26 @@ input, select {
 
 .fade-in.show {
     opacity: 1;
+}
+
+input[type="radio"] {
+    display: none; /* 라디오 버튼 숨기기 */
+}
+
+input[type="radio"] + label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    width: 120px; /* 크기 조정 */
+    text-align: center;
+    font-size: 24px; /* 폰트 크기 */
+    background-color: #42444B;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #FFD700; /* 선택 시 배경 색상 */
+    color: #000000; /* 선택 시 글자 색상 */
 }
