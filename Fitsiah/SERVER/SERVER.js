@@ -162,9 +162,6 @@ app.get("/exercise", function(req, res){
     }
 });
 
-
-
-
 // 루틴 추천
 app.get("/recommend", function(req, res){
     res.render("routineRec");

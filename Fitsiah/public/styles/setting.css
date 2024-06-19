@@ -21,6 +21,10 @@ body {
     min-height: 95vh;
 }
 
+p {
+    margin-top: 40px;
+}
+
 h1 {
     margin: 3px 0 10px 0;
     font-weight: 600;
@@ -30,8 +34,7 @@ h1 {
 
 #settingImg {
     max-width: 15px;
-    display: flex;
-    margin: auto auto 20px 15px;
+    margin: auto 15px 20px 15px; /* 수정 */
 }
 
 .all-wrap {
@@ -39,7 +42,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* 수정 */
 }
 
 .setting-wrap {
@@ -48,13 +51,13 @@ h1 {
     box-sizing: border-box;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* 가운데 정렬로 유지 */
+    align-items: flex-start; /* 수정 */
 }
 
 input, select {
     width: 380px; 
     height: 45px;
-    margin: 5px auto;
+    margin: 5px 0; /* 수정 */
     border-radius: 10px;
     background-color: #42444B;
     padding: 0 10px;
@@ -66,7 +69,7 @@ input, select {
     color: #ffffff; /* 텍스트 색상 */
 }
 
-.nextsubButton {
+button {
     background-color: #FFD700;
     color: #1F2024;
     margin-top: 20px;
@@ -112,7 +115,7 @@ input[type="radio"] + label {
     display: inline-block;
     cursor: pointer;
     padding: 10px;
-    margin: 5px;
+    margin: 5px 0; /* 수정 */
     width: 120px; /* 크기 조정 */
     text-align: center;
     font-size: 24px; /* 폰트 크기 */

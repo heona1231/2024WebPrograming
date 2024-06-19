@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="all-wrap">
-        <img src="/images/Vector 2.png" id="settingImg">
         <div class="setting-wrap">
             <form action="/set" method="post">
                 <div id="q2">
@@ -18,7 +17,7 @@
                     <input type="number" name="user_height" placeholder="키" required>
                     <input type="number" name="user_weight" placeholder="몸무게" required>
                 </div>
-                <div id="q3" class="hidden">
+                <div id="q3">
                     <p>어떤 도움이 필요한지 확인하기 위해</p>
                     <h1>운동 숙련도를 알려주세요</h1>
                     <input type="radio" id="beginner" name="user_proficiency" value="beginner">
@@ -28,7 +27,7 @@
                     <input type="radio" id="advanced" name="user_proficiency" value="advanced">
                     <label for="advanced">숙련자</label>
                 </div>
-                <div id="q4" class="hidden">
+                <div id="q4">
                     <p>당신의 목적에 맞는 도움을 위해</p>
                     <h1>운동 목적을 알려주세요</h1>
                     <input type="radio" id="weight_loss" name="user_purpose" value="weight_loss">
@@ -38,8 +37,7 @@
                     <input type="radio" id="endurance" name="user_purpose" value="endurance">
                     <label for="endurance">체력</label>
                 </div>
-                <button id="nextButton" type="button">다음</button>
-                <button id="submitButton" type="submit" class="hidden">완료</button>
+                <button id="submitButton" type="submit">완료</button>
             </form>
         </div>
     </div>
