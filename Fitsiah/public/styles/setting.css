@@ -1,0 +1,99 @@
+/* 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* 기본 속성 */
+* {
+    font-family: 'pretendard';
+    font-weight: 200;
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #1F2024;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+}
+
+h1 {
+    margin: 3px 0 10px 0;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: left; /* 왼쪽 정렬 */
+}
+
+#settingImg {
+    max-width: 15px;
+    display: flex;
+    margin: auto auto 20px 15px;
+}
+
+.all-wrap {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.setting-wrap {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* 가운데 정렬로 유지 */
+}
+
+input, select {
+    width: 380px; 
+    height: 45px;
+    margin: 5px auto;
+    border-radius: 10px;
+    background-color: #42444B;
+    padding: 0 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: none;
+    display: block;
+    text-align: left; /* 왼쪽 정렬 */
+}
+
+.nextsubButton {
+    background-color: #FFD700;
+    color: #1F2024;
+    margin-top: 20px;
+    font-weight: 600;
+    display: block; /* 블록 요소로 설정하여 가운데 정렬 */
+    width: 380px; /* 다른 input 요소와 같은 넓이 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-out {
+    opacity: 1;
+    transition: opacity 0.2s ease-out; /* transition duration increased to 1 second */
+}
+
+.fade-in {
+    opacity: 0;
+    display: block;
+    transition: opacity 0.2s ease-in; /* transition duration increased to 1 second */
+}
+
+.fade-out.complete {
+    opacity: 0;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
