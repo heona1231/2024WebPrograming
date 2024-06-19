@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fitsiah</title>
+    <style>
+        .next_box {
+            display: inline-block;
+            vertical-align: top;
+            margin: 100px;
+            border-radius: 10px;
+            background: #212020;
+            padding: 24px;
+            width: 540px;
+            height: 540px;
+            color: #fff;
+        }
+
+        .next_box header {
+            display: flex;
+            align-items: center;
+            padding: 25px 30px 10px;
+            justify-content: space-between;
+            font-size: 28.5px;
+            text-align: center;
+            justify-content: center;
+            font-weight: 500;
+        }
+
+        .next_box header p {
+            margin-left: 39px;
+            margin-left: auto;
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="script.js" defer></script>
+</head>
+
+
+<body>
+    <!-- 네비게이션 -->
+    <div class="nav">
+        <p class="logo"><a href="/main"><img src="image/Logo.png"></a></p>
+        <ul class="nav_menu">
+            <li class="active"><a href="/exercise">운동하기</a></li>
+            <li><a href="/recommend">운동추천</a></li>
+            <li><a href="/community">커뮤니티</a></li>
+            <li><a href="/battle">배틀</a></li>
+        </ul>
+        <a href="/mypage" class="nav_mypage">내 정보</a>
+        <a href="/setting" class="nav_setting">설정</a>
+    </div>
+
+    <!-- 캘린더 -->
+    <div class="first_box">
+        <header>
+            <p class="current-date"></p>
+            <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+            </div>
+        </header>
+        <div class="calendar">
+            <ul class="weeks">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+            </ul>
+            <ul class="days"></ul>
+        </div>
+    </div>
+
+    <div class="second_box">
+        <header>
+            <p>오늘의 기록</p>
+            <div class="icons">
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+            </div>
+        </header>
+        <div class="today">
+            <p class="today_emo"><a href="/emotion"><img src="image/짱이야.png"></a></p>
+            <p class="today_mention">오늘 기분 최고!<br>나는 오늘 짱이야!</p>
+        </div>
+        <div class="memo">
+            <input type="text" placeholder="오늘의 문구를 입력하세요!">
+        </div>
+    </div>
+
+    <div class="next_box" style="display: none;">
+        <header>
+            <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+            </div>
+            <p>짜잔</p>
+        </header>
+    </div>
+
+
+</body>
+
+</html>
