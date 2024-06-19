@@ -1,5 +1,12 @@
 {
   "dependencies": {
-    "path": "^0.12.7"
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "fs": "^0.0.1-security",
+    "objectid": "^3.2.1",
+    "path": "^0.12.7",
+    "sha256": "^0.2.0"
   }
 }
