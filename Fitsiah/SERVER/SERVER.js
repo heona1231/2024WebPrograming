@@ -191,3 +191,13 @@ app.get("/diary", function(req, res){
 app.get("/exStart", function(req, res){
     res.render("exStart");
 });
+
+//마이페이지
+app.get("/mypage", function(req, res){
+    db.collection("UserInfo")
+        .findOne({user_id : req.session.user.user_id})
+        .then(result=>{
+            console.log(result);
+            res.render("mypage", {data : result});
+        });
+});
