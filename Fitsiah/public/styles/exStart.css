@@ -97,16 +97,15 @@ main {
 .main-box {
     margin-top: 100px;
     width: 1280px;
-    height: 1400px;
+    height: 4300px;
+    padding: 0;
 }
-
-
 
 
 
 /* 하단부 타이머를 담당하는 박스 */
 .under-box {
-    width: 100%;
+    width: 81%;
     height: 90px;
     flex-shrink: 0;
     position: fixed;
@@ -116,6 +115,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 /* 운동타이머 */
@@ -334,7 +334,7 @@ main {
     background-color: #717171;
     justify-content: center;
     align-items: center;
-    margin-left: 60px;
+    margin-left: 900px;
 }
 
 .check-box:hover,

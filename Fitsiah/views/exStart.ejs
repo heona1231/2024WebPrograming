@@ -108,137 +108,45 @@
         </ul>
         <a href="/mypage"><img src="/images/nav/Mypage.png"></a>
     </nav>
-
     <main>
         <!-- 운동 리스트 -->
         <div class="box-set main-box">
-
+            <% let i = 0; %>
+            <% data.forEach(function(exercise) { %>
+                <% i += 1; %>
+                <div class="box-set exercise-list">
+                    <header>
+                        <p><span class="yellow-text"><%= i %></span> <%= exercise.exercise_tool %> | <%= exercise.exercise_name %></p>
+                        <hr class="title-div">
+                        <p class="total-bolume">총 볼륨 <%= exercise.weight * exercise.count * exercise.set %>kg</p>
+                    </header>
+                    <main>
+                        <% for (let j = 0; j < exercise.set; j++) {%>
+                        <div class="one-set">
+                            <p class="set-num"><%= j + 1 %></p>
+                            <div class="empty-box kg">
+                                
+                                <input type="text" placeholder='<%= exercise.weight %>' disabled>
+                            </div>
+                            <p class="unit">kg</p>
+                            <div class="empty-box count">
+                                <input type="text" placeholder='<%= exercise.count %>' disabled>
+                            </div>
+                            <p class="unit">회</p>
+                            
+                        </div>
+                        <%}%>
+                        <div class="empty-box check-box">
+                            <img src="/images/exStart/check-mark.png">
+                        </div>
+                        <div class="empty-box check-box-complete">
+                            <img src="/images/exStart/check-mark.png">
+                        </div>
+                    </main>
+                </div>
+            <% }); %>
             <!-- 운동 종목 하나 -->
-            <div class="box-set exercise-list">
-                <header>
-                    <p><span class="yellow-text">1</span> 하체 | 레그 익스텐션</p>
-                    <hr class="title-div">
-                    <p class="total-bolume">총 볼륨 3150kg</p>
-                </header>
-                <main>
-                    <div class="one-set">
-                        <p class="set-num">1</p>
-                        <div class="empty-box kg">
-                            <input type="text" placeholder="70">
-                        </div>
-                        <p class="unit">kg</p>
-                        <div class="empty-box count">
-                            <input type="text" placeholder="15">
-                        </div>
-                        <p class="unit">회</p>
-                        <div class="empty-box check-box">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                        <div class="empty-box check-box-complete">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                    </div>
-                    <div class="one-set">
-                        <p class="set-num">2</p>
-                        <div class="empty-box kg">
-                            <input type="text" placeholder="70">
-                        </div>
-                        <p class="unit">kg</p>
-                        <div class="empty-box count">
-                            <input type="text" placeholder="15">
-                        </div>
-                        <p class="unit">회</p>
-                        <div class="empty-box check-box">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                        <div class="empty-box check-box-complete">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                    </div>
-                    <div class="one-set">
-                        <p class="set-num">3</p>
-                        <div class="empty-box kg">
-                            <input type="text" placeholder="70">
-                        </div>
-                        <p class="unit">kg</p>
-                        <div class="empty-box count">
-                            <input type="text" placeholder="15">
-                        </div>
-                        <p class="unit">회</p>
-                        <div class="empty-box check-box">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                        <div class="empty-box check-box-complete">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                    </div>
-                </main>
-            </div>
-
-            <!-- 운동 종목 하나 -->
-            <div class="box-set exercise-list">
-                <header>
-                    <p><span class="yellow-text">2</span> 하체 | 레그 익스텐션</p>
-                    <hr class="title-div">
-                    <p class="total-bolume">총 볼륨 3150kg</p>
-                </header>
-                <main>
-                    <div class="one-set">
-                        <p class="set-num">1</p>
-                        <div class="empty-box kg">
-                            <input type="text" placeholder="70">
-                        </div>
-                        <p class="unit">kg</p>
-                        <div class="empty-box count">
-                            <input type="text" placeholder="15">
-                        </div>
-                        <p class="unit">회</p>
-                        <div class="empty-box check-box">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                        <div class="empty-box check-box-complete">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                    </div>
-                    <div class="one-set">
-                        <p class="set-num">2</p>
-                        <div class="empty-box kg">
-                            <input type="text" placeholder="70">
-                        </div>
-                        <p class="unit">kg</p>
-                        <div class="empty-box count">
-                            <input type="text" placeholder="15">
-                        </div>
-                        <p class="unit">회</p>
-                        <div class="empty-box check-box">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                        <div class="empty-box check-box-complete">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                    </div>
-                    <div class="one-set">
-                        <p class="set-num">3</p>
-                        <div class="empty-box kg">
-                            <input type="text" placeholder="70">
-                        </div>
-                        <p class="unit">kg</p>
-                        <div class="empty-box count">
-                            <input type="text" placeholder="15">
-                        </div>
-                        <p class="unit">회</p>
-                        <div class="empty-box check-box">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                        <div class="empty-box check-box-complete">
-                            <img src="/images/exStart/check-mark.png">
-                        </div>
-                    </div>
-                </main>
-            </div>
-        </div>
-
-
+            
         <!-- 운동 시간, 휴식 타이머, 운동 완료 창 -->
         <div class="box-set under-box">
             <!-- 운동 시간 설정 -->
@@ -282,16 +190,17 @@
                 <p>운동 완료</p>
             </div>
         </div>
-
         <!-- 다이어리 기록 팝업 -->
         <div id="overlay"></div>
+        <form action="/exDone" method="post">
         <div id="popup">
             <div id="popupWrap">
                 <header>
-                    <h3>수정하기</h3>
+                    <h3>기록하기</h3>
                     <input type="button" id="closePopup" value="X">
                 </header>
                 <img src="/images/exStart/happy.png" id="emotion">
+                
                 <div id="select">
                     <img src="/images/exStart/happy.png" id="happy">
                     <img src="/images/exStart/sad.png" id="sad">
@@ -299,12 +208,12 @@
                     <img src="/images/exStart/depressed.png" id="depressed">
                     <img src="/images/exStart/bad.png" id="bad">
                 </div>
-                <input type="text" id="changeText">
+                <input type="text" id="todayComment" name="todayComment">
                 <input type="submit" value="제출" id="changeSub">
             </div>
         </div>
+    </form>
     </main>
-
     <footer>
 
     </footer>

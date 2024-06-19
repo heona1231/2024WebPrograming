@@ -14,7 +14,7 @@
 <body>
     <!--팝업창-->
     <div id="overlay"></div>
-    <div id="popup">
+    <div id="popup" style="display: none;">
         <div id="popupWrap">
             <header>
                 <h3>수정하기</h3>
@@ -28,8 +28,8 @@
                 <img src="/images/calander/depressed.png" id="depressed">
                 <img src="/images/calander/bad.png" id="bad">
             </div>
-            <input type="text" id="changeText">
-            <input type="submit" value="제출" id="changeSub">
+            <input type="text" id="changeText" value="<%= todayComment %>" class="todayComment">
+            <input type="submit" id="changeSub">
         </div>
     </div>
 
@@ -83,7 +83,7 @@
                         <p>오늘 기분 최고!<br>나는 오늘 짱이야!</p>
                     </div>
                     <div class="memo">
-                        <input type="text" placeholder="오늘의 문구를 입력하세요!">
+                        <h3><%= todayComment %></h3>
                     </div>
                 </div>
                 <div class="d-second">
@@ -108,25 +108,32 @@
                 <div class="third_box box-set">
                     <header>
                         <div style="display: flex;">
-                            <p class="current-date"></p>
-                            <p><span class="white-text">나의 </span><span class="yellow-text">운동 요약</span></p>
+                            <span id="exercise-date"></span>
+                            <p><span class="white-text"><%= date %>  나의 </span><span class="yellow-text">운동 요약</span></p>
                         </div>
                         <div class="icons">
                             <span id="next" class="material-symbols-rounded">chevron_right</span>
                         </div>
                     </header>
                     <main>
+                        <% let totalCount = 0; %>
+                        <% let totalWeight = 0; %>
+                        <% data.forEach(function(exercise) { %>
+                            <% totalCount += exercise.count; %>
+                            <% totalWeight += exercise.weight * exercise.count * exercise.set; %>
+                        <% }); %>
+                        <%  %>
                         <div class="third_image">
                             <img src="/images/calander/timer 1.png">
-                            <p>300:00<br><span class="explain">시간</span></p>
+                            <p><%= timer %><br><span class="explain">시간</span></p>
                         </div>
                         <div class="third_image">
                             <img src="/images/calander/dumbbell 1.png">
-                            <p style="margin-top: 32px;">9회<br><span class="explain">운동 개수</span></p>
+                            <p style="margin-top: 32px;"><%= totalCount %>회<br><span class="explain">운동 개수</span></p>
                         </div>
                         <div class="third_image">
                             <img src="/images/calander/exercise 1.png">
-                            <p>7899kg<br><span class="explain">전체 볼륨</span></p>
+                            <p><%= totalWeight %>kg<br><span class="explain">전체 볼륨</span></p>
                         </div>
                     </main>
                 </div>

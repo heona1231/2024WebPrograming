@@ -8,6 +8,7 @@
     font-family: 'Pretendard';
     color: #fff;
 }
+
 body{
     margin: 0;
     background-color: #1F2024;
@@ -255,6 +256,10 @@ header .current-date {
     color: #8b8a8a;
 }
 
+.todayComment{
+    text-align: center;
+    font-size: 20px;
+}
 
 
 /*구분선*/

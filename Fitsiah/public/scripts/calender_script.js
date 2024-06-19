@@ -69,11 +69,26 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
 
-    // 날짜 요소에 클릭 이벤트 추가
     daysTag.addEventListener("click", (event) => { // daysTag에 클릭 이벤트 추가
         if (event.target && event.target.nodeName === "LI") { // 클릭된 요소가 LI 요소인 경우에만 실행
             const clickedDate = event.target.innerText; // 클릭된 날짜를 가져옴
-            alert(`You clicked on ${months[currMonth]} ${clickedDate}, ${currYear}`); // 클릭된 날짜를 포함한 알림 표시
+            
+            function formatDate(inputDate) {
+                // Split the date string into components
+                const parts = inputDate.split('-');
+                let day = parts[0];
+                let month = parts[1];
+                let year = parts[2];
+            
+                // Pad month with leading zero if necessary
+                month = month.padStart(2, '0');
+                day = day.padStart(2, '0'); 
+                // Concatenate and return the formatted date
+                return `${day}-${month}-${year}`;
+            }
+            
+            const sendDate = formatDate(`${currYear}-${currMonth+1}-${clickedDate}`);
+            window.location.href = `/diary?date=${sendDate}`;
         }
     });
 
@@ -145,4 +160,5 @@ document.addEventListener('DOMContentLoaded', function(){
     bad.addEventListener("click", function(){
         emotion.src = bad.src;
     });
+
 });
